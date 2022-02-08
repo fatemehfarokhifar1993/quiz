@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  border: none;
+}
+body {
+  background: linear-gradient(90deg, #5b63b7 40%, #191919 100%);
+}
+.quiz-container {
+  margin: 2rem auto;
+  height: 510px;
+  width: 300px;
+  background-color: #9296f0;
+  border: solid 8px #cbccff;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 1fr 6fr 2fr 1fr;
+  padding: 5px;
+}
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #191919;
+  text-align: center;
+  text-transform: uppercase;
+}
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.question-container {
+  border: dotted 1px #cbccff;
+  color: white;
+  width: 100%;
+  height: 6rem;
+  padding: 5px;
+}
+.choices {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+.choices p {
+  width: 40%;
+  height: 4.5rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked ~ .option {
+  background-color: #5b63b7;
+  color: #fff;
+}
+
+label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: #191919;
+  text-align: center;
+}
+
+label:hover {
+  font-weight: bold;
+  transform: scale(1.12);
+  background-color: #cbccff;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit {
+  color: #cbccff;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 1);
+  border: none;
+  width: 180px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #5b63b7 43%, #191919 100%);
+  cursor: pointer;
+}
+.submit:hover {
+  color: #fff;
+  background: linear-gradient(60deg, #191919 20%, #5b63b7 43%);
+}
+.progress {
+  margin-left: 10px;
+  color: #191919;
+  font-size: 18px;
+}
+.result {
+  height: 480px;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
